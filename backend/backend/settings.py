@@ -28,9 +28,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$45^8*b=1_4y#*jfxu)j36$(%81g5b=ckzu01!ku5q9w9w#rqd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True  # Temporarily set to True to see detailed error messages
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "*",
+    "ec2-3-87-14-67.compute-1.amazonaws.com",
+    "api.ec2-3-87-14-67.compute-1.amazonaws.com"
+]
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
