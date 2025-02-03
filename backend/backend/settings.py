@@ -157,5 +157,24 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWS_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    "http://ec2-3-87-14-67.compute-1.amazonaws.com",
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+# If needed, you can be more permissive during development
+CORS_ALLOW_ALL_ORIGINS = True  # Use this temporarily for testing
+
+# Add these headers if needed
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
